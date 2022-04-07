@@ -1,0 +1,42 @@
+<div class="container">
+
+  <!-- In Normal Mode  -->
+  <mat-toolbar *ngIf="!searchMode">
+    <img [src]="logo" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <span *ngIf="!searchMode">Dashboard</span>
+    <span class="example-spacer"></span>
+
+
+    <button class="search-icon" mat-button mat-icon-button matSuffix *ngIf="!searchField && !searchMode"
+      (click)="modeSwitch()">
+      <mat-icon>search</mat-icon>
+    </button>
+
+
+    <ng-container *ngIf="!searchMode">
+      <div *ngFor="let item of userList">
+
+        <img [src]="item.imageUrl" width="40px" style="border-radius: 50%;">
+      </div>
+    </ng-container>
+
+  </mat-toolbar>
+
+
+  <!-- In Search Mode -->
+  <mat-toolbar *ngIf="searchMode">
+
+    <div class="app-search">
+      <input *ngIf="searchMode" placeholder="Type to Search" class="search-input" type="text" [(ngModel)]="searchField"
+        matInput matSuffix autocomplete="off">
+
+      <div>
+        <mat-icon *ngIf="searchMode" class="btn-icon" mat-icon-button (click)="resetSearch()" matSuffix>close</mat-icon>
+      </div>
+    </div>
+
+  </mat-toolbar>
+
+</div>
+
+<app-side-nav></app-side-nav>

@@ -1,0 +1,43 @@
+*{
+  outline: none;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.search-icon{
+  margin-left: auto;
+}
+
+
+
+.app-search{
+  position: absolute;
+  margin: 0px;
+  z-index: 110;
+  width: 100%;
+  left: 0px;
+  top:-1px;
+  box-shadow: 2px 0px 10px rgb(0 0 0 / 20%);
+}
+
+.app-search input{
+  min-height: 38px;
+  height: calc(1.5em + 0.75rem + 2px);
+  width: 100.5%;
+  padding: 35px;
+  font-size: 17px;
+}
+
+.btn-icon{
+ position: absolute;
+top: 26px;
+cursor: pointer;
+background: #ffffff;
+width: 15px;
+height: 15px;
+right: 20px;
+font-size: 19px;
+margin-right: 8px;
+}
