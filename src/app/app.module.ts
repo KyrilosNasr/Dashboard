@@ -20,6 +20,7 @@ import { SideNavComponent } from './layout/components/side-nav/side-nav.componen
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FeaturedModulesModule } from './feature-modules/featured-modules.module';
 
 
 
@@ -48,10 +49,11 @@ import { HttpClientModule } from '@angular/common/http';
 
     NgxsModule.forRoot([], {
       developmentMode: !environment.production
-    })
+    }),
+    FeaturedModulesModule
 
   ],
-  providers: [],
+  providers: [FeaturedModulesModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
