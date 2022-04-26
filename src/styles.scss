@@ -6,3 +6,10 @@
 
 
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import './assets//styling/custom-config';
+@import '/src/assets/styling/-variables.scss';
+
+*{
+  outline: none;
+  box-sizing: border-box;
+}

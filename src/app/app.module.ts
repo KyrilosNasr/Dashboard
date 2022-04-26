@@ -14,7 +14,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-
+import { MatMenuModule } from '@angular/material/menu';
+import { MatOptionModule } from '@angular/material/core';
 
 import { SideNavComponent } from './layout/components/side-nav/side-nav.component';
 import { HomeComponent } from './home/home.component';
@@ -46,6 +47,9 @@ import { FeaturedModulesModule } from './feature-modules/featured-modules.module
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    MatMenuModule,
+    MatOptionModule,
+
 
     NgxsModule.forRoot([], {
       developmentMode: !environment.production

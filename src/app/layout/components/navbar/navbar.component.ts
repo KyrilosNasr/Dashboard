@@ -12,15 +12,15 @@ export class NavbarComponent implements OnInit {
 
   public searchField: string;
   public searchMode: boolean = false;
-  public logo: string = '../../../../assets/logo-icon.png'
+  public logo: string = '../../../../assets/images/logo-icon.png'
   public userPic: string;
 
   userList: User;
 
-  private _jsonUrl: string = "/assets/user.json"
+  private _jsonUrl: string = "/assets/json/user.json"
 
   constructor(private http: HttpClient) {
-    const postss: Observable<User> = http.get<User>('/assets/json/user.json');
+    const postss: Observable<User> = http.get<User>(this._jsonUrl);
     postss.subscribe(post => {
       this.userList = post;
     })

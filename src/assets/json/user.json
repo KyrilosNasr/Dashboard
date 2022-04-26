@@ -1,7 +1,10 @@
 [
 {
-    "name": "joe",
-    "age": 32,
-    "imageUrl": "/assets/1.jpg"
+    "fullName": "Hanna Gover",
+    "jobTitle": "Accoubts Manager Amix corp",
+    "email": "johnathan@admin.com",
+    "password": "admin",
+    "phoneNumber": "1234567890",
+    "image": "/assets/images/users/1.jpg"
 }
 ]

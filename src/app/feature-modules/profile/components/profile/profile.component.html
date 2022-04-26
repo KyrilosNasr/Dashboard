@@ -1,113 +1,91 @@
-<div class="page-wrapper">
-    <!-- ============================================================== -->
-    <!-- Container fluid  -->
-    <!-- ============================================================== -->
-    <div class="container-fluid">
-        <!-- ============================================================== -->
-        <!-- Bread crumb and right sidebar toggle -->
-        <!-- ============================================================== -->
-        <div class="row page-titles">
-            <div class="col-md-5 align-self-center">
-                <h3 class="text-themecolor">Profile</h3>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-4 col-xlg-3">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="mt-4"> <img src="" class="img-circle" width="150" />
-                            <h4 class="card-title mt-2">Hanna Gover</h4>
-                            <h6 class="card-subtitle">Accoubts Manager Amix corp</h6>
-                            <div class="row text-center justify-content-md-center">
-                                <div class="col-4"><a href="javascript:void(0)" class="link"><em
-                                            class="icon-people"></em>
-                                        <font class="font-medium">254</font>
-                                    </a></div>
-                                <div class="col-4"><a href="javascript:void(0)" class="link"><em
-                                            class="icon-picture"></em>
-                                        <font class="font-medium">54</font>
-                                    </a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Column -->
-            <!-- Column -->
-            <div class="col-lg-8 col-xlg-9">
-                <div class="card">
-                    <div class="card-body">
-                        <form class="form-horizontal form-material mx-2">
-                            <div class="form-group">
-                                <label class="col-md-12">Full Name</label>
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="Johnathan Doe"
-                                        class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="example-email" class="col-md-12">Email</label>
-                                <div class="col-md-12">
-                                    <input type="email" placeholder="johnathan@admin.com"
-                                        class="form-control form-control-line" name="example-email" id="example-email">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Password</label>
-                                <div class="col-md-12">
-                                    <input type="password" value="password" class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Phone No</label>
-                                <div class="col-md-12">
-                                    <input type="text" placeholder="123 456 7890"
-                                        class="form-control form-control-line">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-md-12">Message</label>
-                                <div class="col-md-12">
-                                    <textarea rows="5" class="form-control form-control-line"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="col-sm-12">Select Country</label>
-                                <div class="col-sm-12">
-                                    <select class="form-control form-control-line">
-                                        <option>London</option>
-                                        <option>India</option>
-                                        <option>Usa</option>
-                                        <option>Canada</option>
-                                        <option>Thailand</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-12">
-                                    <button class="btn btn-success">Update Profile</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <!-- Column -->
-        </div>
-        <!-- Row -->
-        <!-- ============================================================== -->
-        <!-- End PAge Content -->
-        <!-- ============================================================== -->
+<div class="container ml-64">
+    <div class="self-center mt-4">
+        <h3 class=" text-skylbue text-xl pt-4 leading-8">Profile</h3>
     </div>
-    <!-- ============================================================== -->
-    <!-- End Container fluid  -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- footer -->
-    <!-- ============================================================== -->
-    <footer class="footer"> © 2021 Admin Pro by <a href="https://www.wrappixel.com/">wrappixel.com</a> </footer>
-    <!-- ============================================================== -->
-    <!-- End footer -->
-    <!-- ============================================================== -->
-</div>
+    <div class="w-full py-2 lg:py-5 lg:flex md:flex">
+
+        <!--Profile card -->
+        <div class="lg:w-1/4 md: w-1/4 flex-initial">
+            <div class="bg-white py-5 flex flex-col items-center shadow-3xl lg:ml-5 mb-10 cursor-pointer text-center">
+                <!--image wrapper-->
+                <img src="/assets/images/users/5.jpg" alt="profile picture" class="rounded-full w-40 h-40" />
+        
+                <span class="block font-medium text-3xl my-4 text-gray-900 px-5"> Hanna Gover </span>
+        
+                <span class="block text-lg text-gray-900 px-5"> Accounts Manager Amix corp</span>
+        
+                <div class="text-center lg:justify-center md:justify-center">
+                    <div class="flex mb-4 md:justify-center">
+                        <div class="w-1/4">
+                            <mat-icon class="img mr-1 ml-2 mt-3">people_outline</mat-icon>
+                        </div>
+                        <div class="w-1/4 mt-3 mr-3">
+                            <font class="text-base">254</font>
+                        </div>
+                        <div class="w-1/4 ml-12">
+                            <mat-icon class="img mr-1 ml-2 mt-3">image
+                            </mat-icon>
+                        </div>
+                        <div class="w-1/4 mt-3 mr-3">
+                            <font class="text-base">54</font>
+                        </div>
+                        </div>
+                </div>
+                </div>
+                    </div>
+                    <!-- user info Form  -->
+                    <div class="lg:w-3/4 md:w-3/4 bg-white ml-4 max-h-max pl-4  shadow-3xl flex-initial">
+                        <form [formGroup]="userInfo" (ngSubmit)="onFormSubmit()" class="form-horizontal form-material mx-2">
+                            <div class="pt-6">
+                                <label for="name" class="font-semibold">Full Name</label>
+                                <mat-form-field class="w-full mt-2">
+                                    <input matInput formControlName="fullName" class="my-6" placeholder="Ex. Johnathan Doe">
+                                </mat-form-field>
+                            </div>
+                            <div class="pt-6">
+                                <label for="email" class="font-semibold">Email</label>
+                                <mat-form-field class="w-full mt-2">
+                                    <input matInput formControlName="email" class="my-6" placeholder="johnathan@admin.com">
+                                </mat-form-field>
+                            </div>
+                            <div class="pt-6">
+                                <label for="password" class="font-semibold">Password</label>
+                                <mat-form-field class="w-full mt-2">
+                                    <input matInput formControlName="password" type="password" class="my-6"
+                                        placeholder="strong password = more Security">
+                                </mat-form-field>
+                            </div>
+                            <div class="pt-6">
+                                <label class="font-semibold">Phone Number *</label>
+                                <mat-form-field class="w-full mt-2">
+                                    <input matInput formControlName="phoneNumber" type="number" placeholder="123 456 7890" class="my-6">
+                                </mat-form-field>
+                                <div *ngIf="userData.phoneNumber.touched && userData.phoneNumber.touched" class="text-red-500">
+                                    <div class="text-red-500" *ngIf="userData.phoneNumber.errors?.required">Mobile
+                                        number is required</div>
+                                    <!-- <div class="text-red-500" *ngIf="userData.phoneNumber.errors">Provide 12 digit phone number</div> -->
+                                </div>
+                            </div>
+                            <div class="pt-6">
+                                <label class="font-semibold">Message</label>
+                                <mat-form-field class="w-full mt-2">
+                                    <textarea matInput formControlName="message" maxlength="500" rows="5" class="my-6"></textarea>
+                                </mat-form-field>
+                            </div>
+                            <mat-form-field class="pt-6">
+                                <mat-label type="button" mat-raised-button color="accent" mat-button>Select Your
+                                    country</mat-label>
+                                <mat-select>
+                                    <mat-option type="menu" mat-menu-item>London</mat-option>
+                                    <mat-option type="menu" mat-menu-item>India</mat-option>
+                                    <mat-option type="menu" mat-menu-item>Usa</mat-option>
+                                    <mat-option type="menu" mat-menu-item>Canada</mat-option>
+                                    <mat-option type="menu" mat-menu-item>Thailand</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                            <section class="pt-6 mb-6">
+                                <button mat-button type="submit" class="update">Update Profile</button>
+                            </section>
+                </form>
+                </div>
+                </div>

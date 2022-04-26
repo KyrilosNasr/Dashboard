@@ -1,12 +1,17 @@
 export class User {
-    name: string;
-    age: number;
+    fullName: string;
+    message?: string;
     imageUrl: string;
-
-    constructor(name: string, age: number, imageUrl: string) {
-        this.age = age;
+    password: any;
+    phone: number;
+    email: string;
+    constructor(fullName: string, message: string, imageUrl: string, password: any, phone: number, email: string) {
+        this.message = message;
         this.imageUrl = imageUrl;
-        this.name = name;
+        this.fullName = fullName;
+        this.password = password;
+        this.phone = phone;
+        this.email = email;
     }
 
 
