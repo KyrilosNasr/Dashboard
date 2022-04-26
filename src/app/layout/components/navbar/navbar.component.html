@@ -14,9 +14,9 @@
 
 
     <ng-container *ngIf="!searchMode">
-      <div *ngFor="let item of userList">
+      <div *ngFor="let user of userList">
 
-        <img [src]="item.imageUrl" width="40px" style="border-radius: 50%;">
+        <img [src]="user.image" width="40px" style="border-radius: 50%;">
       </div>
     </ng-container>
 

@@ -73,14 +73,11 @@
                                 </mat-form-field>
                             </div>
                             <mat-form-field class="pt-6">
-                                <mat-label type="button" mat-raised-button color="accent" mat-button>Select Your
+                                <mat-label type="button" mat-raised-button mat-button>Select Your
                                     country</mat-label>
                                 <mat-select>
-                                    <mat-option type="menu" mat-menu-item>London</mat-option>
-                                    <mat-option type="menu" mat-menu-item>India</mat-option>
-                                    <mat-option type="menu" mat-menu-item>Usa</mat-option>
-                                    <mat-option type="menu" mat-menu-item>Canada</mat-option>
-                                    <mat-option type="menu" mat-menu-item>Thailand</mat-option>
+                                    <mat-option *ngFor="let key of countries" [value]="key">
+                                        {{ key.name }}</mat-option>
                                 </mat-select>
                             </mat-form-field>
                             <section class="pt-6 mb-6">

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../../user.model';
+import { User } from '../../../feature-modules/profile/model/user.model';
 import { Observable } from 'rxjs';
 
 @Component({

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+import { ProfileService } from '../../model/profile.service';
+import { Country } from '../../model/country.model';
 
 @Component({
   selector: 'app-profile',
@@ -11,7 +12,9 @@ export class ProfileComponent implements OnInit {
 
   public userInfo: FormGroup;
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {
+  public countries: Country;
+
+  constructor(private fb: FormBuilder, private ps: ProfileService) {
 
   }
 
@@ -24,9 +27,14 @@ export class ProfileComponent implements OnInit {
       message: new FormControl('', [Validators.required, Validators.maxLength(500)]),
       country: new FormControl(''),
     })
+    this.getCountries();
   }
 
-
+  getCountries() {
+    this.ps.getCountires().subscribe(
+      (data: Country) => this.countries = data
+    )
+  }
   get userData() {
     return this.userInfo.controls;
   }
